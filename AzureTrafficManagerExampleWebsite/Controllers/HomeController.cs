@@ -10,6 +10,8 @@ namespace AzureTrafficManagerExampleWebsite.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.BaseUrl = Request.Url.GetLeftPart(UriPartial.Authority);
+
             return View();
         }
 
